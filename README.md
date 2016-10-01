@@ -6,7 +6,7 @@
 3. Save file.
 4. Exit nano
 5. from the command line type the following: `sudo chmod 777 /bin/setport`
-6. now type in setport. This will print the usage page.
+6. now type in `setport`. This will print the usage page.
 
 ####Test portsetter.cpp.o
 
