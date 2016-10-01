@@ -1,0 +1,12 @@
+
+portsetter About Page
+
+------------------------------------------------------------------------------------------------------
+Author: Adam Case
+Date Created: 05/09/2017
+
+Other available services:
+    Come to me for other information technology needs you may have. I can build ecommerce websites, 
+    blogs, games, web based applications. I also offer services for database creation and managment,
+    even query creations for searching your databases. I can offer cron programs, file upload services, and
+    software creation.

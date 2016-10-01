@@ -1,0 +1,132 @@
+setport >test.txt
+0
+portsetter.usage_en.txt
+setport -h >test.txt
+0
+portsetter.usage_en.txt
+setport --help >test.txt
+0
+portsetter.usage_en.txt
+setport -? >test.txt
+0
+portsetter.usage_en.txt
+setport -! >test.txt
+0
+portsetter.about_en.txt
+setport --about >test.txt
+0
+portsetter.about_en.txt
+setport -p 4040 >test.txt
+0
+setport4040.txt
+setport --port 4040 >test.txt
+0
+setport4040.txt
+setport -p -e >test.txt
+0
+setport_e_8080.txt
+setport --port -e >test.txt
+0
+setport_e_8080.txt
+setport -p -e PORT >test.txt
+0
+setport_e_8080.txt
+setport --port -e PORT
+0
+setport_e_8080.txt
+setport help >test.txt
+11
+er_inv_param_en.txt
+setport -help >test.txt
+11
+er_inv_param_en.txt
+setport --h >test.txt
+11
+er_inv_param_en.txt
+setport -h --help >tets.txt
+11
+er_inv_param_en.txt
+setport -hs >test.txt
+11
+er_inv_param_en.txt
+setport --? >test.txt
+11
+er_inv_param_en.txt
+setport -?g >test.txt
+11
+er_inv_param_en.txt
+setport -? -h >test.txt
+11
+er_inv_param_en.txt
+setport -? --help >test.txt
+11
+er_inv_param_en.txt
+setport -? 4040 >test.txt
+11
+er_inv_param_en.txt
+setport --! >test.txt
+11
+er_inv_param_en.txt
+setport -about >test.txt
+11
+er_inv_param_en.txt
+setport -! --about >test.txt
+11
+er_inv_param_en.txt
+setport -! -? >test.txt
+11
+er_inv_param_en.txt
+setport -! 4040 >test.txt
+11
+er_inv_param_en.txt
+setport -!k >test.txt
+11
+er_inv_param_en.txt
+setport -?! >test.txt
+11
+er_inv_param_en.txt
+setport -p --port 9 >test.txt
+10
+er_exc_param_en.txt
+setport -p 77 33 >test.txt
+10
+er_exc_param_en.txt
+setport -p -21 >test.txt
+12
+er_prt_range_en.txt
+setport -p 0 >test.txt
+12
+er_prt_range_en.txt
+setport -p 90642 >test.txt 
+12
+er_prt_range_en.txt
+setport --port >test.txt
+11
+er_inv_param_en.txt
+setport -x 45321 >test.txt
+11
+er_inv_param_en.txt
+setport -P 714 >test.txt
+11
+er_inv_param_en.txt
+setport -v >test.txt
+0
+version_en.txt
+setport --version >test.txt
+0
+version_en.txt
+setport -version >test.txt
+11
+er_inv_param_en.txt
+setport --v >test.txt
+11
+er_inv_param_en.txt
+setport -v --version >test.txt
+11
+er_inv_param_en.txt
+setport -v 4040 >test.txt
+11
+er_inv_param_en.txt
+setport -vs >test.txt
+11
+er_inv_param_en.txt

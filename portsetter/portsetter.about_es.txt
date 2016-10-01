@@ -1,0 +1,12 @@
+
+portsetter Sobre la página
+
+------------------------------------------------------------------------------------------------------
+Autor: Adam Case
+fecha de creacion: 05/09/2017
+
+Otros servicios disponibles:
+    Ven a mí para otras necesidades de tecnología de la información que pueda tener. Puedo construir sitios web de comercio electrónico,
+    blogs, juegos, aplicaciones basadas en web. También ofrecen servicios para la creación de bases de datos y la gerencia,
+    incluso consultar creaciones para la búsqueda de bases de datos. Puedo ofrecer programas de cron, presentar servicios de carga, y
+    la creación de software.

@@ -1,0 +1,6 @@
+escucha en el puerto 
+Error: Supera los parámetros de entrada permitidas.
+Error: Parámetro no válido.
+Error: Número de puerto fuera de rango.
+Error: número de puerto no válido
+Versión:

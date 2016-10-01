@@ -1,0 +1,54 @@
+
+portsetter Usage Page
+------------------------------------------------------------------------------------------------------
+Description: 
+portsetter is an app that takes in either 1 to 3 parameters and connects a user to the specified port
+or prints the usage page for assistance in use of program.
+
+------------------------------------------------------------------------------------------------------
+Parameters:
+-p [port_number], --port [port_number]
+
+	-p followed by a space and then the desired port number, or --port followed by a space and then 
+	the port number, will cause this program to connect to the specified port and inform the user that 
+	they are connected to that port. Only one port number will be set at a time. See notes at bottom 
+	for restriction of ports.
+
+-h, --help, -?
+
+	using-h or --help as a paremter will cause the usage page to print.
+	
+-p -e, -p -e [port_number]
+
+	-p followed by -e seperated with a space will take the default evnviroment variable 'PORT' and 
+	listen on the port number. If -p followed by -e and [port_number], all setperated by spaces, will
+	take the enviroment variable name that was passed in and listen on the port number stored in that
+	value.
+	
+-!, --about
+
+	This will print information about the author of this program.
+	
+-v, --version
+
+	This will print the version number of the program.
+
+------------------------------------------------------------------------------------------------------
+Error Codes:
+
+	0: Program terminated with no issues.
+
+	10: Exceeds allowable input parameters.
+
+	11: Invalid parameter.
+
+	12: Port number out of range.
+
+	13: Invalid port number.
+
+------------------------------------------------------------------------------------------------------
+Notes:
+Range of Port numbers:
+
+	Available port numbers to use is 1 - 65536. Port 0 is not a valid port. Ports with negative values are not valid.
+	Any port number greater than 65536 is not a valid port number.
