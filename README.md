@@ -1,7 +1,7 @@
 ####Create "setport" shortcut:
 
     1. From your home directory type in the following command: `sudo nano /bin/setport`
-   This will open a text editor.
+       This will open a text editor.
     2. Type the following into nano: `~/workspace/portsetter/porsetter.cpp.o $1 $2 $3 $4`
     3. Save file.
     4. Exit nano
