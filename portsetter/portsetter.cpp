@@ -12,7 +12,6 @@
 #include<vector>
 #include<regex>
 
-
 using namespace std;
 
 
@@ -129,12 +128,18 @@ int main(int argc, const char * args[]){
         if (flag == "-p" || flag == "--port") {
             
             portNumber = string(args[2]);
+            const char * aNUmber = args[2];
+            char **p;
             
             if (portNumber == "-e") {
                char* envPort = getenv("PORT");
                connectToPort = stoi(envPort);
                cout << msg[SET] << connectToPort << endl;
                return 0;
+            } else if ((strtol(aNUmber, p, 10)) == 0) {
+                cout << "\n" << msg[INVPARAM] << '\n';
+                printUsage(usageFile);
+                return 11;
             }
             
             connectToPort = stoi(portNumber, &strSize);
