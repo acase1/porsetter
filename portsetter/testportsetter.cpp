@@ -69,6 +69,12 @@ int main(){
         cout << "File failed to open." << endl;
     }
     
+    testCases.close();
+    
+    setenv("LANGUAGE","es.UTF-8",1);
+    
+    testCases("testCases_es.txt");
+    
     //prints results
     cout << "Results: " << endl;
     cout << "Tests performed: " << testCount << endl;

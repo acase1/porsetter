@@ -12,7 +12,9 @@
 #include<vector>
 #include<regex>
 
+
 using namespace std;
+
 
 //enumerates messages
 enum {
@@ -46,7 +48,7 @@ int main(int argc, const char * args[]){
     //file name variables
     string usageFile, aboutFile, msgFile;
     
-    //setenv("LANGUAGE","de.UTF-8",1);//testing purposes
+    setenv("LANGUAGE","pig_LATIN.UTF-8",1);//testing purposes
     
     //get language code defaults to english if none is set
     langCode = determineLang();
@@ -245,7 +247,7 @@ string determineLang(){
     string langEnv = "C C.UTF-8";
     char* language;
     string langVal;
-    //regex e("^([a-z]{2})_([A-Z]{2})|^([a-z]{2})");// This is where I am erring out. expression is bad?
+    //regex e("[a-z]");// This is where I am erring out. expression is bad?
     //smatch match;
     
     //list of env variabels to look through
@@ -268,22 +270,31 @@ string determineLang(){
                 langVal = match[1];
             } else {
                 cout << "Bad Language Specification in enviroment variable " 
-                << envVar[i] << "=" << slang << "using english." << endl;
+                << envVar[i] << "=" << slang << " using english." << endl;
                 langVal = "en";
             }
             
             //end test regex
             */
             strSize = langEnv.find(slang);
-        
-            if (strSize == string::npos && slang != "") {
-                langVal = slang.substr(0,2);
-                break;
-            } else {
-                langVal = "en";
-            }
             
+            if (strSize == string::npos && slang != "") {
+                if(slang.length() > 2 && slang.substr(2,1) == "_") {
+                    langVal = slang.substr(0,2);
+                } else if (slang.length()>= 2 && (slang.substr(2,1) == "" || slang.substr(2,1) == ".")) {
+                    langVal = slang.substr(0,2);
+                } else {
+                    cout << "Bad Language Specification in enviroment variable " 
+                    << envVar[i] << "=" << slang << " using english." << endl;
+                    langVal = "en";
+                }
+            }
         }
+    }
+    
+    if (langVal == "") {
+        cout << "No locale language set defaulting to english." << endl;
+        langVal = "en";
     }
     
     return langVal;
