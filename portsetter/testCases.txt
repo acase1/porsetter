@@ -43,7 +43,7 @@ er_inv_param_en.txt
 setport --h >test.txt
 11
 er_inv_param_en.txt
-setport -h --help >tets.txt
+setport -h --help >test.txt
 11
 er_inv_param_en.txt
 setport -hs >test.txt
@@ -130,3 +130,39 @@ er_inv_param_en.txt
 setport -vs >test.txt
 11
 er_inv_param_en.txt
+change envVar
+es.UTF-8
+setport >test.txt
+0
+portsetter.usage_es.txt
+setport -p 4040 >test.txt
+0
+setport4040_es.txt
+setport -p -e >test.txt
+0
+setport_e_8080_es.txt
+setport -! >test.txt
+0
+portsetter.about_es.txt
+setport -v >test.txt
+0
+version_es.txt
+setport -p -20 >test.txt
+12
+er_prt_range_es.txt
+setport -c -c -c -c >test.txt
+10
+er_exc_param_es.txt
+setport -v 4040 >test.txt
+11
+er_inv_param_es.txt
+change envVar
+es_SP.UTF-8
+setport >test.txt
+0
+portsetter.usage_es.txt
+change envVar
+pig_LATIN.UTF-8
+setport -p 4040 >test.txt
+0
+bad_lang_var_en.txt

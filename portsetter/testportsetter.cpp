@@ -28,52 +28,59 @@ int main(){
             
             //Reads in the test input value and turns into const char *
             getline(testCases, input);
-            char * testInput = new char [input.length()+1];
-            strcpy (testInput, input.c_str());
-
-            //Reads in the expected return value from the test input
-            getline(testCases, input);
-            expSysCode = stoi(input); 
             
-            //Reads in the file to compare the printed output to test.txt file
-            getline(testCases, fileToCompare);
-            string temp = begCompStmnt + fileToCompare;
-            char * compStatement = new char [temp.length()+1];
-            strcpy (compStatement, temp.c_str());
-            
-            //performs program call
-            systemCode = system(testInput) / 256;
-            
-            //If system value returned is not equal to expected return test fails
-            if (systemCode != expSysCode) {
-                cout << "Test for '" << testInput << "' failed!" << endl;
-                ++testFailed;
+            if (input == "change envVar") {
+                getline(testCases, input);
+                char * testInput = new char [input.length()+1];
+                strcpy (testInput, input.c_str());
+                setenv("LANGUAGE", testInput,1);
+                
+                cout << "changed language to " << testInput << endl
+                 << endl;
             } else {
-                cout << "Test for '" << testInput << "' succeeded." << endl;
+                char * testInput = new char [input.length()+1];
+                strcpy (testInput, input.c_str());
+    
+                //Reads in the expected return value from the test input
+                getline(testCases, input);
+                expSysCode = stoi(input); 
+                
+                //Reads in the file to compare the printed output to test.txt file
+                getline(testCases, fileToCompare);
+                string temp = begCompStmnt + fileToCompare;
+                char * compStatement = new char [temp.length()+1];
+                strcpy (compStatement, temp.c_str());
+                
+                //performs program call
+                systemCode = system(testInput) / 256;
+                
+                //If system value returned is not equal to expected return test fails
+                if (systemCode != expSysCode) {
+                    cout << "Test for '" << testInput << "' failed!" << endl;
+                    ++testFailed;
+                } else {
+                    cout << "Test for '" << testInput << "' succeeded." << endl;
+                }
+                
+                //compares the output given from the call to output expected
+                systemCode = system(compStatement) / 256;
+                
+                //if output doesn't match fail test.
+                if (systemCode != 0) {
+                    cout << "Output did not match.\n" << endl;
+                    ++msgNotMatch;
+                } else {
+                    cout << "Output matched.\n" << endl;
+                }
+                
+                ++testCount;
             }
-            
-            //compares the output given from the call to output expected
-            systemCode = system(compStatement) / 256;
-            
-            //if output doesn't match fail test.
-            if (systemCode != 0) {
-                cout << "Output did not match.\n" << endl;
-                ++msgNotMatch;
-            } else {
-                cout << "Output matched.\n" << endl;
-            }
-            
-            ++testCount;
         }//end of while loop to read testInput file
     } else {
         cout << "File failed to open." << endl;
     }
     
     testCases.close();
-    
-    setenv("LANGUAGE","es.UTF-8",1);
-    
-    testCases("testCases_es.txt");
     
     //prints results
     cout << "Results: " << endl;

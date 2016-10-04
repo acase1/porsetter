@@ -48,7 +48,7 @@ int main(int argc, const char * args[]){
     //file name variables
     string usageFile, aboutFile, msgFile;
     
-    setenv("LANGUAGE","pig_LATIN.UTF-8",1);//testing purposes
+    //setenv("LANGUAGE","pig_LATIN.UTF-8",1);//testing purposes
     
     //get language code defaults to english if none is set
     langCode = determineLang();
@@ -293,7 +293,6 @@ string determineLang(){
     }
     
     if (langVal == "") {
-        cout << "No locale language set defaulting to english." << endl;
         langVal = "en";
     }
     

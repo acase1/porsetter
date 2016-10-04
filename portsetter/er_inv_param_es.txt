@@ -1,0 +1,56 @@
+
+Error: Parámetro no válido.
+Uso portsetter página
+------------------------------------------------------------------------------------------------------
+Descripción:
+
+portsetter es una aplicación que toma en cualquiera de 1 a 3 parámetros y se conecta un usuario al puerto especificado
+o imprime la página de uso para la asistencia en el uso de los programas.
+
+------------------------------------------------------------------------------------------------------
+Parámetros:
+-p [número_de_puerto], --port [número_de_puerto]
+
+    -p seguido de un espacio y el número de puerto deseado o --port seguido de un espacio y luego
+    el número de puerto, hará que este programa se conecte al puerto especificado e informar al usuario de que
+    que están conectados a ese puerto. Sólo un número de puerto se ajustará a la vez. Ver las notas en la parte inferior
+    para la restricción de los puertos.
+
+-h, --help, -?
+
+    usando-ho --help como paremter hará que la página de uso para imprimir.
+
+-p -e, -p -e [número_de_puerto]
+
+    -p -e seguido por separados con un espacio tendrá la variable evnviroment por defecto "puerto" y
+    escuchar en el número de puerto. Si -p seguido por -e y [número_puerto], todos setperated por espacios, se
+    tomar el nombre de variable de entorno que se pasó y escuchar en el número de puerto en el que se almacena
+    valor.
+
+-!, --about
+
+    Esto imprimirá información sobre el autor de este programa.
+
+-v, --version
+
+    Esto imprimirá el número de versión del programa.
+
+------------------------------------------------------------------------------------------------------
+Códigos de error:
+
+    0: Programa terminado sin problemas.
+
+    10: Supera los parámetros de entrada permitidas.
+
+    11: Parametro invalido.
+
+    12: número de puerto fuera de rango.
+
+    13: número de puerto válido.
+
+------------------------------------------------------------------------------------------------------
+Notas:
+Rango de números de puerto:
+
+    números de puerto disponibles para su uso es de 1 - 65536. Puerto 0 no es un puerto válido. Los puertos con valores negativos no son válidos.
+    Cualquier número de puerto mayor que 65536 no es un número de puerto válido.

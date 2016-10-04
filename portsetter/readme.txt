@@ -21,6 +21,8 @@ Adding new test for testportsetter:
 	1. open the testCases.txt file
 	2. scroll to the bottom of the file.
 	3. each test will require three lines within the testCase.txt file
+		note: optional first line when testing with another language, add a line that includes the statement 'change envVar' followed by another line with the language enviroment variable value.
+         All other lines preceding this change should include the tests desired for this language until the end of file is reached or another language change will happen.
 		a. first line: the desired command and flags along with piping into test.txt file. For example to run the command setport -p 592 type setport -p 592 >test.txt
 		b. second line: the expected return value. From the command above we would enter a 0 for the second line
 		c. third line: for the third lilne type the name of the file you want to compare it to. Make sure that the file you select will have the expected output from the program in it.
