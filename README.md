@@ -35,9 +35,10 @@ testportsetter was written in a way to allow users to create their own tests. In
 
    **note: optional first line** when testing with another language, add a line that includes the statement 'change envVar' followed by another line with the language enviroment variable value.
          All other lines preceding this change should include the tests desired for this language until the end of file is reached or another language change will happen.
-	a. **first line:** the desired command and flags along with piping into _test.txt_ file. For example to run the command `setport -p 592` type `setport -p 592 >test.txt`
-	b. **second line:** the expected return value. From the command above we would enter a `0` for the second line
-	c. **third line:** for the third line type the name of the file you want to compare it to. Make sure that the file you select will have the expected output from the program in it.
+         
+	1. **first line:** the desired command and flags along with piping into _test.txt_ file. For example to run the command `setport -p 592` type `setport -p 592 >test.txt`
+	2. **second line:** the expected return value. From the command above we would enter a `0` for the second line
+	3. **third line:** for the third line type the name of the file you want to compare it to. Make sure that the file you select will have the expected output from the program in it.
 4. Make sure that the cursor is at the end of the last line entered and no blank lines are left in the _testCase.txt_ file.
 
 ####Add new language support:
