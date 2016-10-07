@@ -35,6 +35,9 @@ testportsetter was written in a way to allow users to create their own tests. In
 
    **note: optional first line** when testing with another language, add a line that includes the statement 'change envVar' followed by another line with the language enviroment variable value.
          All other lines preceding this change should include the tests desired for this language until the end of file is reached or another language change will happen.
+         For example; if you wanted to run a test on the language code for german enter the following two lines:
+         `change envVar`
+         `de_DE.UTF-8` (assuming that this would be the enviremoent variable for german language)
          
 	1. **first line:** the desired command and flags along with piping into _test.txt_ file. For example to run the command `setport -p 592` type `setport -p 592 >test.txt`
 	2. **second line:** the expected return value. From the command above we would enter a `0` for the second line
