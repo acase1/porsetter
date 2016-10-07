@@ -1,8 +1,18 @@
+Make and compile program
+In to create the executable for the portsetter and testportsetter program perform the following steps
+1. make sure you are in the directory for portsetter
+2. type the command `make`
+3. after typing make you should see two new files appear `testportsetter` and `setport`
+4. Now that you have made these executables you can now setup the shortcut
+
 Create "setport" shortcut:
+
+Note: Make sure you have created the executables before performing this step. 
+creating executables can be found in the Make and compile program section 
 
 	1. From your home directory type in the following command: sudo nano /bin/setport
 	   This will open a text editor.
-	2. Type the following into nano: ~/workspace/portsetter/porsetter.cpp.o $1 $2 $3 $4
+	2. Type the following into nano: ~/workspace/portsetter/setport $1 $2 $3 $4
 	3. Save file.
 	4. Exit nano
 	5. from the command line type the following: sudo chmod 777 /bin/setport
