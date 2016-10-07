@@ -1,5 +1,6 @@
 ####Make and compile program
 In to create the executable for the portsetter and testportsetter program perform the following steps
+
 1. make sure you are in the directory for portsetter
 2. type the command `make`
 3. after typing make you should see two new files appear `testportsetter` and `setport`
