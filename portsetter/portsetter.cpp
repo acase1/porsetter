@@ -58,6 +58,7 @@ int main(int argc, const char * args[]){
     //get msg file and load messages
     ifstream messages(msgFile);
     
+    //opens file based on lang code returned. if file does not open default to english
     if (messages.good()) {
         while(messages.peek() != EOF) {
             string line;
@@ -68,11 +69,10 @@ int main(int argc, const char * args[]){
         //build file names
         usageFile = "/home/ubuntu/workspace/portsetter/portsetter.usage_" + langCode + ".txt";
         aboutFile = "/home/ubuntu/workspace/portsetter/portsetter.about_" + langCode + ".txt";
-    } else { // if msgFile failed to open translations don't exists default to english
+    } else { 
         
         cout << "Missing " << langCode << " translation files. Using English." << endl;
         msgFile = "/home/ubuntu/workspace/portsetter/portsetter.messages_en.txt";
-        ///home/ubuntu/workspace/portsetter/
         
         ifstream messages(msgFile);
         
@@ -96,7 +96,7 @@ int main(int argc, const char * args[]){
     
     flag = string(args[1]);
     
-    //If two parameters check flag and see if it is == '-h' || '--help'. anything else throw an error
+    //If two parameters check flag and see if it is == '-h' || '--help' || --? || -! || --about || -v ||--version. anything else throw an error
     if (argc == 2){
         
         
@@ -121,7 +121,7 @@ int main(int argc, const char * args[]){
     }//end of argc 2 check
     
     //check to see if 3 parameters passed. if # check to see if parameter is == '-p' || '--port'. 
-    //If true check third parameter to verify it is an int within range for port numbers
+    //If true check third parameter. if third parameter is -e use default envVar for port else check for port number and make sure it is in range.
     //If not throw an error or if not an int throw an error otherwise connect to port.
     if (argc == 3){
         
@@ -165,7 +165,9 @@ int main(int argc, const char * args[]){
 
     }//end of argc 3 check
     
-    //if more than 4 parameters are passed in throw an error
+    //if 4 parameters and flag is -p || --port confirm that 3rd parameter is -e
+    // if 3 parameter is -e than get env variable name passed in as 4th varriable and connect to port
+    // else throw error
     if (argc == 4) {
         
         //this section is for -e flag. first checks if a -p flag exists if it 
@@ -208,6 +210,7 @@ int main(int argc, const char * args[]){
         return 10;
     }
     
+    // If args is 5 or more throw error.
     if (argc >= 5) {
         cout << "\n" << msg[EXCEEDS] << endl;
         printUsage(usageFile);
