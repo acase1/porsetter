@@ -1,3 +1,6 @@
+####Program Location
+Make sure that when program is downloaded it is placed in the following location `~/workspace`
+
 ####Make and compile program
 In to create the executable for the portsetter and testportsetter program perform the following steps
 
