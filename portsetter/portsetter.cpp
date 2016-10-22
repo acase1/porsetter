@@ -53,7 +53,9 @@ int main(int argc, const char * args[]){
     langCode = determineLang();
     
     //build file names based on language code returned
-    msgFile = "/home/ubuntu/workspace/portsetter/portsetter.messages_" + langCode + ".txt";
+    //msgFile = "/home/ubuntu/workspace/portsetter/portsetter.messages_" + langCode + ".txt";
+    
+    msgFile = "portsetter.messages_" + langCode + ".txt";
     
     //get msg file and load messages
     ifstream messages(msgFile);
@@ -67,12 +69,15 @@ int main(int argc, const char * args[]){
         }
         
         //build file names
-        usageFile = "/home/ubuntu/workspace/portsetter/portsetter.usage_" + langCode + ".txt";
-        aboutFile = "/home/ubuntu/workspace/portsetter/portsetter.about_" + langCode + ".txt";
+        //usageFile = "/home/ubuntu/workspace/portsetter/portsetter.usage_" + langCode + ".txt";
+        //aboutFile = "/home/ubuntu/workspace/portsetter/portsetter.about_" + langCode + ".txt";
+        usageFile = "portsetter.usage_" + langCode + ".txt";
+        aboutFile = "portsetter.about_" + langCode + ".txt";
     } else { 
         
         cout << "Missing " << langCode << " translation files. Using English." << endl;
-        msgFile = "/home/ubuntu/workspace/portsetter/portsetter.messages_en.txt";
+        //msgFile = "/home/ubuntu/workspace/portsetter/portsetter.messages_en.txt";
+        msgFile = "portsetter.messages_en.txt";
         
         ifstream messages(msgFile);
         
@@ -84,8 +89,10 @@ int main(int argc, const char * args[]){
             }
         }
         
-        usageFile = "/home/ubuntu/workspace/portsetter/portsetter.usage_en.txt";
-        aboutFile = "/home/ubuntu/workspace/portsetter/portsetter.about_en.txt";
+        //usageFile = "/home/ubuntu/workspace/portsetter/portsetter.usage_en.txt";
+        //aboutFile = "/home/ubuntu/workspace/portsetter/portsetter.about_en.txt";
+        usageFile = "portsetter.usage_en.txt";
+        aboutFile = "portsetter.about_en.txt";
     }
     
     //if only one parameter printUsage if more assign second parameter to variable.
