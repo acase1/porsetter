@@ -137,7 +137,7 @@ int main(int argc, const char * args[]){
             portNumber = string(args[2]);
 
             
-            if (portNumber == "-e") {
+            if (portNumber == "-e" || portNumber == "--environment") {
                char* envPort = getenv("PORT");
                connectToPort = stoi(envPort);
                cout << msg[SET] << connectToPort << endl;
@@ -183,7 +183,7 @@ int main(int argc, const char * args[]){
         if (flag == "-p" || flag == "--port") {
             portNumber = string(args[2]);
             
-            if(portNumber == "-e") {
+            if(portNumber == "-e" || portNumber == "--environment") {
                 const char * envVar = args[3];
                 char* envPort = getenv(envVar);
                 connectToPort = stoi(envPort, &strSize);
