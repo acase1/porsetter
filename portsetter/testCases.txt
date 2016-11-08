@@ -28,10 +28,19 @@ setport_e_8080.txt
 setport --port -e >test.txt
 0
 setport_e_8080.txt
+setport --port --environment >test.txt
+0
+setport_e_8080.txt
 setport -p -e PORT >test.txt
 0
 setport_e_8080.txt
+setport -p --environment PORT >test.txt
+0
+setport_e_8080.txt
 setport --port -e PORT
+0
+setport_e_8080.txt
+setport --port --environment PORT
 0
 setport_e_8080.txt
 setport help >test.txt
@@ -139,6 +148,9 @@ setport -p 4040 >test.txt
 0
 setport4040_es.txt
 setport -p -e >test.txt
+0
+setport_e_8080_es.txt
+setport -p --environment >test.txt
 0
 setport_e_8080_es.txt
 setport -! >test.txt
