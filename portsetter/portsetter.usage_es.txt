@@ -19,11 +19,12 @@ Parámetros:
     usando-ho --help como paremter hará que la página de uso para imprimir.
 
 -p -e, -p -e [número_de_puerto]
+-p --environment, -p --environment [número_de_puerto]
+--port -e, --port -e [número_de_puerto]
+--port --environment, --port --environment [número_de_puerto]
 
-    -p -e seguido por separados con un espacio tendrá la variable evnviroment por defecto "puerto" y
-    escuchar en el número de puerto. Si -p seguido por -e y [número_puerto], todos setperated por espacios, se
-    tomar el nombre de variable de entorno que se pasó y escuchar en el número de puerto en el que se almacena
-    valor.
+    -p seguida por -e o --environment y luego [número_de_puerto] utilizará el puerto en el dado
+    Variable ambiental. Si se omite [número_de_puerto], el valor predeterminado es 'PORT`
 
 -!, --about
 

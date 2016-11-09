@@ -21,11 +21,12 @@ Parameters:
 	using-h or --help as a paremter will cause the usage page to print.
 	
 -p -e, -p -e [port_number]
+-p --environment, -p --environment [port_number]
+--port -e, --port -e [port_number]
+--port --environment, --port --environment [port_number]
 
-	-p followed by -e seperated with a space will take the default evnviroment variable 'PORT' and 
-	listen on the port number. If -p followed by -e and [port_number], all setperated by spaces, will
-	take the enviroment variable name that was passed in and listen on the port number stored in that
-	value.
+	-p followed by either -e or --environment and then [port_number] will use the port in the given
+	environment variable. If [port_number] is omitted, it defaults to `PORT`
 	
 -!, --about
 
